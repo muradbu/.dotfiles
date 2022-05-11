@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+pkill swaybg
+swaybg -o 'eDP-1' -i "/home/murad/Downloads/wallhaven_cropped.jpg" -m stretch &
