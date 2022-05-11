@@ -1,0 +1,85 @@
+include-file = ~/.config/polybar/colors.ini
+include-file = ~/.config/polybar/modules.ini
+
+[bar/system]
+background = ${colors.background}
+bottom = false
+enable-ipc = true
+fixed-center = true
+font-0 = "Cozette:pixelsize=13:style=Regular;3"
+foreground = ${colors.foreground}
+height = 40
+module-margin = 1
+modules-center = battery volume date
+monitor = ${env:MONITOR:}
+monitor-fallback = eDP-1
+offset-x = 88%:-10
+offset-y = 10
+padding = 0
+radius = 0
+width = 12%
+
+[bar/bspwm]
+background = ${colors.background}
+bottom = false
+enable-ipc = true
+fixed-center = true
+font-0 = "Cozette:pixelsize=13:style=Regular;3"
+font-1 = "Iosevka Nerd Font:pixelsize=13:style=Regular;3"
+foreground = ${colors.foreground}
+height = 40
+line-color = #f00
+line-size = 0
+module-margin-right = 4
+modules-center = menu bspwm
+modules-left =
+modules-right =
+monitor = ${env:MONITOR:}
+monitor-fallback = eDP-1
+offset-x = 10
+offset-y = 10
+padding = 2
+radius = 0
+scroll-down = #bspwm.next
+scroll-up = #bspwm.prev
+width = 10%
+
+[bar/quote]
+background = ${colors.transparent}
+bottom = false
+enable-ipc = true
+fixed-center = true
+font-0 = "Cozette:pixelsize=13:style=Regular;3"
+foreground = ${colors.foreground}
+height = 40
+modules-left = quote
+monitor = ${env:MONITOR:}
+monitor-fallback = eDP-1
+offset-x = 10%:+20
+offset-y = 10
+width = 78%:-40
+
+[bar/fullsize]
+background = ${colors.background}
+bottom = false
+enable-ipc = true
+fixed-center = true
+font-0 = "Cozette:pixelsize=13:style=Regular;3"
+font-1 = "Iosevka Nerd Font:pixelsize=13:style=Regular;3"
+foreground = ${colors.foreground}
+height = 40
+line-color = #f00
+line-size = 0
+module-margin-right = 4
+modules-left = bspwm
+modules-center = spotify
+modules-right = battery volume date
+monitor = ${env:MONITOR:}
+monitor-fallback = eDP-1
+offset-x =
+offset-y =
+padding = 2
+radius = 0
+scroll-down = #bspwm.next
+scroll-up = #bspwm.prev
+width = 100%
