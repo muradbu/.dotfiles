@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if grep -qs '/mnt ' /proc/mounts; then
+	sudo umount /mnt
+	sudo cryptsetup close /dev/mapper/data;
+else
+	sudo cryptsetup open /dev/sda1 data;
+	sudo mount -o noatime,compress=zstd,discard=async,space_cache=v2,autodefrag,subvol=/@data /dev/mapper/data /mnt
+fi
+echo " "
+lsblk /dev/sda1 -o name,mountpoint
